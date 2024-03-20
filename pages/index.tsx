@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import Head from "next/head";
 import axios from "axios";
 
 import { Video } from "../types";
@@ -12,13 +12,21 @@ interface IProps {
 
 const Home = ({ videos }: IProps) => {
   return (
-    <div className="flex flex-col gap-10 videos h-full">
-      {videos.length ? (
-        videos.map((video: Video) => <VideoCard post={video} key={video._id} />)
-      ) : (
-        <NoResults text="No videos" />
-      )}
-    </div>
+    <>
+      <Head>
+        <title>Discover top videos / Tiktik</title>
+        <link rel="icon" href="/tiktik-logo.svg" type="image/x-icon"></link>
+      </Head>
+      <div className="flex flex-col gap-10 videos h-full">
+        {videos.length ? (
+          videos.map((video: Video) => (
+            <VideoCard post={video} key={video._id} />
+          ))
+        ) : (
+          <NoResults text="No videos" />
+        )}
+      </div>
+    </>
   );
 };
 
