@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import { FaCloudUploadAlt } from "react-icons/fa";
