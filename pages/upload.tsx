@@ -9,7 +9,7 @@ import { client } from "../utils/client";
 import { topics } from "../utils/constants";
 import { BASE_URL } from "../utils";
 
-function upload() {
+function Upload() {
   const [isLoading, setIsLoading] = useState(false);
   const [wrongFileType, setWrongFileType] = useState(false);
   const [videoAsset, setVideoAsset] = useState<
@@ -177,4 +177,4 @@ function upload() {
   );
 }
 
-export default upload;
+export default Upload;
